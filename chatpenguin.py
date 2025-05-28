@@ -11,6 +11,13 @@ with st.sidebar:
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
+# 🔧 Limpia espacios/saltos de línea accidentales
+openai_api_key = openai_api_key.strip()
+
+# Usa la clave
+openai.api_key = openai_api_key
+
+
 # Cargar automáticamente el CSV desde la URL
 try:
     df = pd.read_csv(CSV_URL)
