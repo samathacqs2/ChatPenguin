@@ -15,7 +15,7 @@ with st.sidebar:
 openai_api_key = openai_api_key.strip()
 
 # Usa la clave
-openai.api_key = openai_api_key
+openai_api_key = openai_api_key
 
 # Cargar automáticamente el CSV desde la URL
 try:
