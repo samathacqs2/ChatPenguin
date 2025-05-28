@@ -15,8 +15,7 @@ with st.sidebar:
 openai_api_key = openai_api_key.strip()
 
 # Usa la clave
-openai_api_key = openai_api_key
-
+openai.api_key = openai_api_key
 
 # Cargar automáticamente el CSV desde la URL
 try:
@@ -30,6 +29,9 @@ except Exception as e:
 st.title("💬 Chatbot")
 st.caption("🚀 A Streamlit chatbot powered by OpenAI")
 
+# --- Show the dataset ---
+st.subheader("👀 Vista previa del dataset")
+st.dataframe(df, use_container_width=True)  # or st.write(df.head()) for first 5 rows
 
 
 if "messages" not in st.session_state:
